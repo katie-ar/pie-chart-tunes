@@ -8,27 +8,27 @@ function OtherList({otherList}){
         setOtherView(value)
     }
     
-    /*return (
+    return (
         <div>
             {otherView === false ?<Button onClick={() => handleOtherClick(true)}>See other</Button>:
             <div>
             <Button onClick={() => handleOtherClick(false)}>Hide other</Button>
-            <ul class="other-list">
-            {otherList.map((genre) =>
-                <li key={genre}>{genre}</li>
-            )}
-            </ul>
+            <div class="other-list">
+                {otherList.map((genre) =>
+                    <p key={genre}>{genre}</p>
+                )}
+            </div>
             </div>}
         </div>
-    )*/
+    )
 
-    return (
+    /*return (
         <div class="other-list">
             {otherList.map((genre) =>
                 <p key={genre}>{genre}</p>
             )}
         </div>
-    )
+    )*/
 }
 
 export default OtherList
