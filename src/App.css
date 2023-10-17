@@ -28,7 +28,7 @@
   color: #5A5A5A;
 }
 
-.other-list{
+.other-list li{
   font-size:20px;
   @media screen and (max-width: 1000px) {
     font-size: 5vmin;

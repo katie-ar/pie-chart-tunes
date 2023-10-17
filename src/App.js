@@ -8,7 +8,7 @@ import Button from './Button';
 function App() {
 
     const clientId = '209e9420de61407fb540e5280287a4bf';
-    const redirectUri = 'https://katie-ar.github.io/pie-chart-tunes/';
+    const redirectUri = 'https://katie-ar.github.io/pie-chart-tunes';
     const [accessToken, setToken] = useState("")
 
     // Code verifier function

@@ -7,6 +7,7 @@ function OtherList({otherList}){
     const handleOtherClick = (value) => {
         setOtherView(value)
     }
+    
     return (
         <div>
             {otherView === false ?<Button onClick={() => handleOtherClick(true)}>See other</Button>:
