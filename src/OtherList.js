@@ -8,7 +8,7 @@ function OtherList({otherList}){
         setOtherView(value)
     }
     
-    return (
+    /*return (
         <div>
             {otherView === false ?<Button onClick={() => handleOtherClick(true)}>See other</Button>:
             <div>
@@ -20,6 +20,14 @@ function OtherList({otherList}){
             </ul>
             </div>}
         </div>
+    )*/
+
+    return (
+        <ul class="other-list">
+            {otherList.map((genre) =>
+                <li key={genre}>{genre}</li>
+            )}
+        </ul>
     )
 }
 

@@ -28,11 +28,12 @@
   color: #5A5A5A;
 }
 
-.other-list li{
-  font-size:20px;
+.other-list{
+  /*font-size:20px;
   @media screen and (max-width: 1000px) {
     font-size: 12px;
-  }
+  }*/
+  font-size: 5vmin;
 }
 
 
