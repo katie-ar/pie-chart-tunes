@@ -23,11 +23,11 @@ function OtherList({otherList}){
     )*/
 
     return (
-        <ul class="other-list">
+        <div class="other-list">
             {otherList.map((genre) =>
-                <li key={genre}>{genre}</li>
+                <p key={genre}>{genre}</p>
             )}
-        </ul>
+        </div>
     )
 }
 
