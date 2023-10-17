@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Button from "./Button"
 
 function OtherList({otherList}){
@@ -7,6 +7,10 @@ function OtherList({otherList}){
     const handleOtherClick = (value) => {
         setOtherView(value)
     }
+
+    useEffect (() => {
+        setOtherView(false);
+    }, [otherList])
     
     return (
         <div>
