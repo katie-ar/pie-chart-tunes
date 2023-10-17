@@ -28,13 +28,17 @@
   color: #5A5A5A;
 }
 
-.other-list{
+.other-list {
   /*font-size:20px;
   @media screen and (max-width: 1000px) {
     font-size: 12px;
   }*/
   /*font-size: 5vmin;*/
-  font-size: 12px;
+  font-size: 5vmin;
+  padding:10px;
+  background-color: #aa7160;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 
