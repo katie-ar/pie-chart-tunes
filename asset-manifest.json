@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pie-chart-tunes/static/css/main.30fbe67f.css",
+    "main.css": "/pie-chart-tunes/static/css/main.a364e46c.css",
     "main.js": "/pie-chart-tunes/static/js/main.cb9feb6c.js",
     "static/js/787.8be1628f.chunk.js": "/pie-chart-tunes/static/js/787.8be1628f.chunk.js",
     "index.html": "/pie-chart-tunes/index.html",
-    "main.30fbe67f.css.map": "/pie-chart-tunes/static/css/main.30fbe67f.css.map",
+    "main.a364e46c.css.map": "/pie-chart-tunes/static/css/main.a364e46c.css.map",
     "main.cb9feb6c.js.map": "/pie-chart-tunes/static/js/main.cb9feb6c.js.map",
     "787.8be1628f.chunk.js.map": "/pie-chart-tunes/static/js/787.8be1628f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.30fbe67f.css",
+    "static/css/main.a364e46c.css",
     "static/js/main.cb9feb6c.js"
   ]
 }
