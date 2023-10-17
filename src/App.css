@@ -29,16 +29,15 @@
 }
 
 .other-list {
-  /*font-size:20px;
-  @media screen and (max-width: 1000px) {
-    font-size: 12px;
-  }*/
-  /*font-size: 5vmin;*/
-  font-size: 5vmin;
+  font-size:20px;
   padding:10px;
   background-color: #d49f90;
   border: 1px solid black;
   border-radius: 20px;
+  @media screen and (max-width: 1000px) {
+    font-size: 5vmin;
+  }
+  
 }
 
 
