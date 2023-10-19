@@ -10,7 +10,7 @@ function App() {
     const redirectUri = 'https://katie-ar.github.io/pie-chart-tunes/';
 
     // The state variables
-    const [accessToken, setToken] = useState("")
+    const [accessToken, setToken] = useState("");
 
     // Code verifier function
     function generateRandomString(length) {
@@ -64,7 +64,7 @@ function App() {
 
     // Removes all data from local storage and clears the access token state variable when the user clicks the logout button
     const logout = () => {
-      setToken("")
+      setToken("");
       localStorage.clear();
       window.location.reload(false);
     }
@@ -105,7 +105,7 @@ function App() {
               });
         }
         else if (localStorage.getItem('code_verifier') && localStorage.getItem('access_token')) {
-          setToken(localStorage.getItem('access_token'))
+          setToken(localStorage.getItem('access_token'));
         }
     }, []);
 
