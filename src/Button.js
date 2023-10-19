@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// Allows the possibility of having a styled button
 const Button = styled.button`
   background-color: #5f7a57;
   color: white;
@@ -13,8 +14,7 @@ const Button = styled.button`
   @media screen and (max-width: 1000px) {
     font-size: 5vmin;
     width: 95%;
-  }
-  
+  }  
 `;
 
 export default Button;
