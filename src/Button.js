@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Allows the possibility of having a styled button
+// Allows the possibility of having a styled button (for the login, logout, and see/hide other buttons)
 const Button = styled.button`
   background-color: #5f7a57;
   color: white;
