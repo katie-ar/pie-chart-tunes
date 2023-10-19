@@ -7,11 +7,11 @@ function PieChartData({userData, dataType}){
         generateData();
     }, [userData])
 
-    const [pieData, setPieData] = useState([])
-    const [otherList, setOtherList] = useState([])
+    const [pieData, setPieData] = useState([]);
+    const [otherList, setOtherList] = useState([]);
 
     const generateData = () => {
-        var tempPieData = []
+        var tempPieData = [];
         
         if (dataType === 'Popularity'){
             // How to generate the pie chart data if the user wants to find out about popularity
@@ -20,7 +20,7 @@ function PieChartData({userData, dataType}){
                 {'name': 'Relatively known', 'songCount': 0},
                 {'name': 'Popular', 'songCount': 0},
                 {'name': 'Mega popular', 'songCount': 0}
-            ]
+            ];
 
             for (let i = 0; i < userData.length; i++){
                 var popularity = userData[i].popularity;
@@ -38,7 +38,7 @@ function PieChartData({userData, dataType}){
                 }
             }
             
-            setPieData(tempPieData)
+            setPieData(tempPieData);
         }
         else if (dataType === 'Genre'){
             // How to generate the pie chart data if the user wants to find out about genre
@@ -47,30 +47,30 @@ function PieChartData({userData, dataType}){
             var uniqueGenres = []
             for (let i = 0; i < userData.length; i++){
                 for (let j = 0; j < userData[i].genres.length; j++){
-                    var currentGenre = userData[i].genres[j]
+                    var currentGenre = userData[i].genres[j];
                     if (uniqueGenres.includes(currentGenre) === false){
-                        uniqueGenres.push(currentGenre)
+                        uniqueGenres.push(currentGenre);
                     }
                 }
             }
             
             // Setting up all of the genres in the pie data
             for (let i = 0; i < uniqueGenres.length; i++){
-                var newItem = {'name': uniqueGenres[i], 'songCount': 0}
-                tempPieData.push(newItem)
+                var newItem = {'name': uniqueGenres[i], 'songCount': 0};
+                tempPieData.push(newItem);
             }
 
             // Counting the number of artists with each of the unique genres
             for (let i = 0; i < userData.length; i++){
                 for (let j = 0; j < userData[i].genres.length; j++){
-                    currentGenre = userData[i].genres[j]
-                    var pos = 0
+                    currentGenre = userData[i].genres[j];
+                    var pos = 0;
                     for (let k = 0; k < uniqueGenres.length; k++){
                         if (currentGenre === uniqueGenres[k]){
                             pos = k;
                         }
                     }
-                    tempPieData[pos]['songCount'] = tempPieData[pos]['songCount'] + 1
+                    tempPieData[pos]['songCount'] = tempPieData[pos]['songCount'] + 1;
                 }
             }
 
@@ -84,22 +84,22 @@ function PieChartData({userData, dataType}){
                 var otherCount = 0;
                 var tempOtherList = [];
                 for (let i = 10; i < tempPieData.length; i++){
-                    otherCount = otherCount + tempPieData[i]['songCount']
-                    tempOtherList.push(tempPieData[i]['name'])
+                    otherCount = otherCount + tempPieData[i]['songCount'];
+                    tempOtherList.push(tempPieData[i]['name']);
                 }
-                setOtherList(tempOtherList)
-                var tempDataForOther = []
+                setOtherList(tempOtherList);
+                var tempDataForOther = [];
                 for (let i = 0; i < 10; i++){
-                    tempDataForOther.push(tempPieData[i])
+                    tempDataForOther.push(tempPieData[i]);
                 }
-                newItem = {'name':'other', 'songCount':otherCount}
-                tempPieData = []
+                newItem = {'name':'other', 'songCount':otherCount};
+                tempPieData = [];
                 for (let i = 0; i < 10; i++){
-                    tempPieData.push(tempDataForOther[i])
+                    tempPieData.push(tempDataForOther[i]);
                 }
-                tempPieData.push(newItem)
+                tempPieData.push(newItem);
             }
-            setPieData(tempPieData)
+            setPieData(tempPieData);
         }
         else if (dataType === 'Song Length'){
             // How to generate the pie chart data if the user wants to find out about song length
@@ -109,7 +109,7 @@ function PieChartData({userData, dataType}){
                 {'name': '3 - 5 minutes', 'songCount': 0},
                 {'name': '5 - 10 minutes', 'songCount': 0},
                 {'name': '> 10 minutes', 'songCount': 0}
-            ]
+            ];
 
             for (let i = 0; i < userData.length; i++){
                 var songLength = userData[i].duration_ms;
@@ -130,7 +130,7 @@ function PieChartData({userData, dataType}){
                 }
             }
 
-            setPieData(tempPieData)
+            setPieData(tempPieData);
         }
     }
 
