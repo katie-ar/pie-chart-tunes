@@ -34,17 +34,21 @@ const ButtonGroup = styled.div`
 `;
 
 function MainGroup(){
+
+    // The values represented by each button and the values shown on each button
     const timeRangeOptions = [['short_term', '4 weeks'], ['medium_term', '6 months'], ['long_term', 'All Time']];
     const dataTypeOptions = ['Popularity', 'Genre', 'Song Length'];
 
-    // The selectedTime and selectedType state variables are always updated to reflect what the user has clicked on
+    // By default the selectedTime state variable is 'short_term' and the selectedType state variable is 'Popularity'
     const [selectedTime, setTime] = useState(timeRangeOptions[0][0]);
     const [selectedType, setType] = useState(dataTypeOptions[0]);
 
     // Displaying the option buttons
+    // The selectedTime and selectedType state variables are always updated to reflect what option buttons the user has clicked on
+    // selectedTime and selectedType are passed into the UserData component
     return (
     <div>
-      <div  class="option-group">
+      <div class="option-group">
         <ButtonGroup>
             {timeRangeOptions.map(time => (
                 <ButtonToggle class="option-button"

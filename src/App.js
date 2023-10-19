@@ -9,7 +9,7 @@ function App() {
     const clientId = '209e9420de61407fb540e5280287a4bf';
     const redirectUri = 'https://katie-ar.github.io/pie-chart-tunes/';
 
-    // The state variables
+    // The state variable storing the access token
     const [accessToken, setToken] = useState("");
 
     // Code verifier function

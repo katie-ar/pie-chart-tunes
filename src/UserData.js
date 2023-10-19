@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import PieChartData from "./PieChartData";
 
 function UserData({type, time}){
+    // Any time the user changes their options for the pie chart, the appropriate data is fetched from the Spotify API
     useEffect(() => {
       getUserData();
     }, [type, time])
     
+    // The state variable storing the data fetched from the Spotify API
     const [userData, setUserData] = useState("");
 
+    // Fetching the appropriate user data from the Spotify API
     const getUserData = async () => {
         const token = localStorage.getItem('access_token');
 
@@ -63,6 +66,7 @@ function UserData({type, time}){
         }
     }
 
+    // Passing the user data and data type to the PieChartData component
     return (
         <div>
             <PieChartData userData={userData} dataType={type}></PieChartData>

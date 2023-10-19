@@ -3,13 +3,16 @@ import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
 import OtherList from "./OtherList";
 
 function PieChartData({userData, dataType}){
+    // Any time the data fetched from the API changes, the pie chart data will change to reflect that
     useEffect (() => {
         generateData();
     }, [userData])
 
+    // The state variables storing the pie chart data and the list of genres classed as 'other'
     const [pieData, setPieData] = useState([]);
     const [otherList, setOtherList] = useState([]);
 
+    // Generating the appropriate pie chart data
     const generateData = () => {
         var tempPieData = [];
         
