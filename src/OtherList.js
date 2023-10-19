@@ -29,4 +29,4 @@ function OtherList({otherList}){
     )
 }
 
-export default OtherList
+export default OtherList;
