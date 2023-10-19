@@ -33,7 +33,6 @@ const ButtonGroup = styled.div`
   display: flex;
 `;
 
-// Displays the option buttons
 function MainGroup(){
     const timeRangeOptions = [['short_term', '4 weeks'], ['medium_term', '6 months'], ['long_term', 'All Time']]
     const dataTypeOptions = ['Popularity', 'Genre', 'Song Length']
@@ -42,6 +41,7 @@ function MainGroup(){
     const [selectedTime, setTime] = useState(timeRangeOptions[0][0])
     const [selectedType, setType] = useState(dataTypeOptions[0])
 
+    // Displaying the option buttons
     return (
     <div>
       <div  class="option-group">
