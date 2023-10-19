@@ -2,7 +2,7 @@
 
 Note: Currently only specifically allowed Spotify accounts can sign in on this website. I'm awaiting acceptance of a quota extension request, which will allow anyone who visits the website to sign in to their Spotify account.
 
-This is a responsive React app that makes use of the [Recharts library](https://recharts.org/) and the [styled-components library](https://styled-components.com/). When you sign in to your Spotify account, you can view various aspects of your Spotify listening data represented by pie charts. It's hosted on Github pages and you can visit it [here](https://katie-ar.github.io/pie-chart-tunes/).
+This is a responsive React app that makes use of the [Recharts library](https://recharts.org/) and the [styled-components library](https://styled-components.com/). When you sign in to your Spotify account, you can view various aspects of your Spotify listening data represented by pie charts. It's hosted on GitHub Pages and you can visit it [here](https://katie-ar.github.io/pie-chart-tunes/).
 
 ### Example screenshots
 
