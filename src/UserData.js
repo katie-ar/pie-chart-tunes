@@ -2,19 +2,17 @@ import { useState, useEffect } from "react";
 import PieChartData from "./PieChartData";
 
 function UserData({type, time}){
-
     useEffect(() => {
       getUserData();
     }, [type, time])
     
-    const [userData, setUserData] = useState("")
+    const [userData, setUserData] = useState("");
 
     const getUserData = async () => {
-
         const token = localStorage.getItem('access_token');
 
         if (type === 'Popularity' || type === 'Song Length'){
-            // Fetch top tracks
+            // Fetching the user's top tracks in the appropriate time range
             const tracksUrl = 'https://api.spotify.com/v1/me/top/tracks?time_range=' + time;
 
             const {trackData} = fetch(tracksUrl, {
@@ -32,13 +30,14 @@ function UserData({type, time}){
                   setUserData(data.items)
                 })
                 .catch(error => {
+                  // Dealing with the access token expiring
                   localStorage.clear();
                   window.location.reload(false);
                   console.error('Error:', error);
                 });
         }
         else if (type === 'Genre'){
-            // Fetch top artists
+            // Fetching the user's top artists in the appropriate time range
             const artistsUrl = 'https://api.spotify.com/v1/me/top/artists?limit=20&time_range=' + time;
 
             const {artistsData} = fetch(artistsUrl, {
@@ -56,6 +55,7 @@ function UserData({type, time}){
                   setUserData(data.items)
                 })
                 .catch(error => {
+                  // Dealing with the access token expiring
                   localStorage.clear();
                   window.location.reload(false);
                   console.error('Error:', error);

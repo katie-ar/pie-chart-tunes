@@ -4,12 +4,13 @@ import React from 'react';
 import MainGroup from './MainGroup';
 import Button from './Button';
 
-
 function App() {
-
+    // The constants
     const clientId = '209e9420de61407fb540e5280287a4bf';
     const redirectUri = 'https://katie-ar.github.io/pie-chart-tunes/';
-    const [accessToken, setToken] = useState("")
+
+    // The state variables
+    const [accessToken, setToken] = useState("");
 
     // Code verifier function
     function generateRandomString(length) {
@@ -38,8 +39,8 @@ function App() {
         return base64encode(digest);
     }
 
-
-    const userAuthentication = async () => {
+    // Requests the user authorisation code when the user clicks the login button
+    const userAuthorisation = async () => {
         const code_verifier = generateRandomString(128);
         const code_challenge = await generateCodeChallenge(code_verifier);
 
@@ -61,14 +62,15 @@ function App() {
         window.location = 'https://accounts.spotify.com/authorize?' + args;
     }
 
+    // Removes all data from local storage and clears the access token state variable when the user clicks the logout button
     const logout = () => {
-      setToken("")
+      setToken("");
       localStorage.clear();
       window.location.reload(false);
     }
 
+    // After the user has given permission, the access token is requested on returning to the webpage
     useEffect (() => {
-
         if (localStorage.getItem('code_verifier') && !localStorage.getItem('access_token')){
         const urlParams = new URLSearchParams(window.location.search);
         localStorage.setItem('code',(urlParams.get('code')));
@@ -81,7 +83,6 @@ function App() {
             code_verifier: localStorage.getItem('code_verifier')
           });
 
-  
           const response = fetch('https://accounts.spotify.com/api/token', {
               method: 'POST',
               headers: {
@@ -104,17 +105,17 @@ function App() {
               });
         }
         else if (localStorage.getItem('code_verifier') && localStorage.getItem('access_token')) {
-          setToken(localStorage.getItem('access_token'))
+          setToken(localStorage.getItem('access_token'));
         }
     }, []);
 
+    // Displays the page
     return (
-
         <div className='App'>
             <header className='App-header'>
                 <p id="mainHeader">pie chart tunes</p>
                 {!accessToken ?
-                <Button class="authButton" onClick={userAuthentication}>
+                <Button class="authButton" onClick={userAuthorisation}>
                     Log in to Spotify
                 </Button>:
                 <div>
@@ -128,15 +129,9 @@ function App() {
                     </div>
                 </div>
                 }
-
-            </header>
-            
-        </div>
-        
+            </header>   
+        </div>   
     )
-
-
 }
 
 export default App;
-
