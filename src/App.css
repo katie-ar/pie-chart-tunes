@@ -1,8 +1,8 @@
+/* Styling the whole webpage */
 .App {
   background-color: #EFD2CB;
   font-family: 'Helvetica', sans-serif;
 }
-
 
 .App-header {
   min-height: 100vh;
@@ -15,6 +15,7 @@
   }
 }
 
+/* Styling the main header of the webpage */
 #mainHeader {
   padding: 10px;
   background-color:#aa7160;
@@ -24,10 +25,12 @@
   }
 }
 
+/* Styling the font colour of the legend and the 'other' genres list */
 .text-color-class, .other-list {
   color: #5A5A5A;
 }
 
+/* Styling the list of 'other' genres
 .other-list {
   font-size:20px;
   padding:10px;
@@ -37,7 +40,6 @@
   @media screen and (max-width: 1000px) {
     font-size: 15px;
   }
-  
 }
 
 
