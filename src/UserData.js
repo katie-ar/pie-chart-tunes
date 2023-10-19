@@ -6,7 +6,7 @@ function UserData({type, time}){
       getUserData();
     }, [type, time])
     
-    const [userData, setUserData] = useState("")
+    const [userData, setUserData] = useState("");
 
     const getUserData = async () => {
         const token = localStorage.getItem('access_token');
