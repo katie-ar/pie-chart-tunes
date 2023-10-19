@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import PieChartData from "./PieChartData";
 
 function UserData({type, time}){
-
     useEffect(() => {
       getUserData();
     }, [type, time])
@@ -10,11 +9,10 @@ function UserData({type, time}){
     const [userData, setUserData] = useState("")
 
     const getUserData = async () => {
-
         const token = localStorage.getItem('access_token');
 
         if (type === 'Popularity' || type === 'Song Length'){
-            // Fetch top tracks
+            // Fetching the user's top tracks in the appropriate time range
             const tracksUrl = 'https://api.spotify.com/v1/me/top/tracks?time_range=' + time;
 
             const {trackData} = fetch(tracksUrl, {
@@ -38,7 +36,7 @@ function UserData({type, time}){
                 });
         }
         else if (type === 'Genre'){
-            // Fetch top artists
+            // Fetching the user's top artists in the appropriate time range
             const artistsUrl = 'https://api.spotify.com/v1/me/top/artists?limit=20&time_range=' + time;
 
             const {artistsData} = fetch(artistsUrl, {
