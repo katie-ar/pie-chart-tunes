@@ -5,7 +5,6 @@ import MainGroup from './MainGroup';
 import Button from './Button';
 
 function App() {
-
     // The constants
     const clientId = '209e9420de61407fb540e5280287a4bf';
     const redirectUri = 'https://katie-ar.github.io/pie-chart-tunes/';
@@ -63,14 +62,14 @@ function App() {
         window.location = 'https://accounts.spotify.com/authorize?' + args;
     }
 
-    // Removes all data from local storage and clears the access token state variable when the user clicks logout
+    // Removes all data from local storage and clears the access token state variable when the user clicks the logout button
     const logout = () => {
       setToken("")
       localStorage.clear();
       window.location.reload(false);
     }
 
-    // After the user has given permission, the access token is request on returning to the webpage
+    // After the user has given permission, the access token is requested on returning to the webpage
     useEffect (() => {
         if (localStorage.getItem('code_verifier') && !localStorage.getItem('access_token')){
         const urlParams = new URLSearchParams(window.location.search);
@@ -136,4 +135,3 @@ function App() {
 }
 
 export default App;
-
