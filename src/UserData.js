@@ -30,6 +30,7 @@ function UserData({type, time}){
                   setUserData(data.items)
                 })
                 .catch(error => {
+                  // Dealing with the access token expiring
                   localStorage.clear();
                   window.location.reload(false);
                   console.error('Error:', error);
@@ -54,6 +55,7 @@ function UserData({type, time}){
                   setUserData(data.items)
                 })
                 .catch(error => {
+                  // Dealing with the access token expiring
                   localStorage.clear();
                   window.location.reload(false);
                   console.error('Error:', error);
