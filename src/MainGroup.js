@@ -34,12 +34,12 @@ const ButtonGroup = styled.div`
 `;
 
 function MainGroup(){
-    const timeRangeOptions = [['short_term', '4 weeks'], ['medium_term', '6 months'], ['long_term', 'All Time']]
-    const dataTypeOptions = ['Popularity', 'Genre', 'Song Length']
+    const timeRangeOptions = [['short_term', '4 weeks'], ['medium_term', '6 months'], ['long_term', 'All Time']];
+    const dataTypeOptions = ['Popularity', 'Genre', 'Song Length'];
 
     // The selectedTime and selectedType state variables are always updated to reflect what the user has clicked on
-    const [selectedTime, setTime] = useState(timeRangeOptions[0][0])
-    const [selectedType, setType] = useState(dataTypeOptions[0])
+    const [selectedTime, setTime] = useState(timeRangeOptions[0][0]);
+    const [selectedType, setType] = useState(dataTypeOptions[0]);
 
     // Displaying the option buttons
     return (
