@@ -6,6 +6,10 @@ This is a responsive React app that makes use of the [Recharts library](https://
 
 ### Example screenshots
 
+An example of the login page on a phone screen:
+
+![An example of the login page on a phone screen](https://github.com/katie-ar/pie-chart-tunes/assets/148056793/190bfe2c-a837-47f5-84f6-3cf7197c6eab)
+
 An example of a 4 weeks popularity pie chart on a laptop screen:
 
 ![An example of a 4 weeks popularity pie chart on a laptop screen](https://github.com/katie-ar/pie-chart-tunes/assets/148056793/f88e6890-cf83-4ce4-b23f-ee4b5f107f6b)
