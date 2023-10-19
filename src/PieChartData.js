@@ -157,4 +157,4 @@ function PieChartData({userData, dataType}){
     )
 }
 
-export default PieChartData
+export default PieChartData;
