@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
 import OtherList from "./OtherList";
 
-
 function PieChartData({userData, dataType}){
-
     useEffect (() => {
         generateData();
     }, [userData])
@@ -14,6 +12,7 @@ function PieChartData({userData, dataType}){
 
     const generateData = () => {
         var tempPieData = []
+        
         if (dataType === 'Popularity'){
             // How to generate the pie chart data if the user wants to find out about popularity
             tempPieData = [
@@ -38,7 +37,7 @@ function PieChartData({userData, dataType}){
                   tempPieData[0]['songCount'] = tempPieData[0]['songCount'] + 1;
                 }
             }
-
+            
             setPieData(tempPieData)
         }
         else if (dataType === 'Genre'){
@@ -60,7 +59,6 @@ function PieChartData({userData, dataType}){
                 var newItem = {'name': uniqueGenres[i], 'songCount': 0}
                 tempPieData.push(newItem)
             }
-
 
             // Counting the number of artists with each of the unique genres
             for (let i = 0; i < userData.length; i++){
@@ -101,7 +99,6 @@ function PieChartData({userData, dataType}){
                 }
                 tempPieData.push(newItem)
             }
-
             setPieData(tempPieData)
         }
         else if (dataType === 'Song Length'){
@@ -137,8 +134,10 @@ function PieChartData({userData, dataType}){
         }
     }
 
+    // The colours of the pie chart
     var colours = ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#98f5e1" , "#9bf6ff","#a0c4ff", "#bdb2ff", "#ffc6ff", "#e0bfe0", "#fffffc"];
 
+    // Displaying the pie chart with a legend
     return (
        <div>
         <ResponsiveContainer width="100%" height={350}>
@@ -150,14 +149,12 @@ function PieChartData({userData, dataType}){
                     ))
                   }
                 </Pie>
-                
                 <Legend layout="horizontal"  formatter={(value, entry, index) => <span className="text-color-class">{value}</span>}/>
         </PieChart>
         </ResponsiveContainer>
         {dataType === 'Genre' ? <OtherList otherList={otherList}></OtherList>:<div></div>}
        </div> 
     )
-
 }
 
 export default PieChartData
