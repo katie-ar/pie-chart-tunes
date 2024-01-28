@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import React from 'react';
 import MainGroup from './MainGroup';
 import Button from './Button';
+import spotifyLogo from './spotifyLogo.png';
 
 function App() {
     // The constants
@@ -129,9 +130,13 @@ function App() {
                     </div>
                 </div>
                 }
-                <div>
-                  Data from Spotify used: song popularity and length from your top songs, the genres of your top artists
-                  <img src="spotify logo.svg"></img>
+                <div id="footer">
+                  <img src={spotifyLogo} alt="Spotify's logo"/>
+                  <p>Data used:</p>
+                  <ul>
+                    <li>Song popularity and length from your top songs (from the selected time range)</li>
+                    <li>The genres of your top artists (from the selected time range)</li>
+                  </ul>
                 </div>
             </header>   
         </div>   

@@ -44,3 +44,23 @@
     font-size: 15px;
   }
 }
+
+/* Styling the footer */
+#footer {
+  padding: 10px;
+  background-color:#aa7160;
+  font-size: 15px;
+  /* Changing the font size on smaller screens */
+  @media screen and (max-width: 1000px) {
+    font-size: 4vmin;
+  }
+}
+
+/* Styling the Spotify logo image */
+#footer img {
+  width: 200px;
+  /* Changing the size of the image on smaller screens */
+  @media screen and (max-width: 1000px) {
+    width: 60%;
+  }
+}
