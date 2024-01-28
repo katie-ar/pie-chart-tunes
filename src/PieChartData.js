@@ -155,7 +155,7 @@ function PieChartData({userData, dataType}){
                 <Legend layout="horizontal"  formatter={(value, entry, index) => <span className="text-color-class">{value}</span>}/>
         </PieChart>
         </ResponsiveContainer>
-        {dataType === 'Genre' ? <OtherList otherList={otherList}></OtherList>:<div></div>}
+        {dataType === 'Genre' && otherList.length > 0  ? <OtherList otherList={otherList}></OtherList>:<div></div>}
        </div> 
     )
 }
