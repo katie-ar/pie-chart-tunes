@@ -132,7 +132,7 @@ function App() {
                 }
                 <div id="footer">
                   <img src={spotifyLogo} alt="Spotify's logo"/>
-                  <p>Data from Spotify used:</p>
+                  <p>Data from <a href="https://open.spotify.com/">Spotify</a> used:</p>
                   <ul>
                     <li>Song popularity and length from your top songs (from the selected time range)</li>
                     <li>The genres of your top artists (from the selected time range)</li>
