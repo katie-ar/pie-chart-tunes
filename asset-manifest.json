@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/pie-chart-tunes/static/css/main.0a74ad9b.css",
-    "main.js": "/pie-chart-tunes/static/js/main.4007f30f.js",
+    "main.css": "/pie-chart-tunes/static/css/main.03076f4c.css",
+    "main.js": "/pie-chart-tunes/static/js/main.8da52457.js",
     "static/js/787.8be1628f.chunk.js": "/pie-chart-tunes/static/js/787.8be1628f.chunk.js",
+    "static/media/spotifyLogo.png": "/pie-chart-tunes/static/media/spotifyLogo.0c4ae91bae23217d39c9.png",
     "index.html": "/pie-chart-tunes/index.html",
-    "main.0a74ad9b.css.map": "/pie-chart-tunes/static/css/main.0a74ad9b.css.map",
-    "main.4007f30f.js.map": "/pie-chart-tunes/static/js/main.4007f30f.js.map",
+    "main.03076f4c.css.map": "/pie-chart-tunes/static/css/main.03076f4c.css.map",
+    "main.8da52457.js.map": "/pie-chart-tunes/static/js/main.8da52457.js.map",
     "787.8be1628f.chunk.js.map": "/pie-chart-tunes/static/js/787.8be1628f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a74ad9b.css",
-    "static/js/main.4007f30f.js"
+    "static/css/main.03076f4c.css",
+    "static/js/main.8da52457.js"
   ]
 }
