@@ -61,6 +61,6 @@
   width: 200px;
   /* Changing the size of the image on smaller screens */
   @media screen and (max-width: 1000px) {
-    width: 60%;
+    width: 70%;
   }
 }
