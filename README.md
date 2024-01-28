@@ -16,7 +16,7 @@ An example of a 4 weeks popularity pie chart on a laptop screen:
 
 An example of an all time genre pie chart on a phone screen with 'other' displayed:
 
-![An example of an all time genre pie chart on a phone screen with 'other' displayed]("https://github.com/katie-ar/pie-chart-tunes/assets/148056793/f469a4f9-aaa6-452f-82ba-8e9f11d4d051")
+![An example of an all time genre pie chart on a phone screen with 'other' displayed]("https://github.com/katie-ar/pie-chart-tunes/assets/148056793/2ebf102b-1a33-4b1c-89f3-efbbfa0072db")
 
 An example of an all time genre pie chart on a phone screen with 'other' hidden:
 
