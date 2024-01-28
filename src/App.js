@@ -129,6 +129,10 @@ function App() {
                     </div>
                 </div>
                 }
+                <div>
+                  Data from Spotify used: song popularity and length from your top songs, the genres of your top artists
+                  <img src="spotify logo.svg"></img>
+                </div>
             </header>   
         </div>   
     )
