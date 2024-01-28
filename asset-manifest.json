@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/pie-chart-tunes/static/css/main.4c0584c3.css",
-    "main.js": "/pie-chart-tunes/static/js/main.0fa0aa97.js",
+    "main.js": "/pie-chart-tunes/static/js/main.dba2c993.js",
     "static/js/787.8be1628f.chunk.js": "/pie-chart-tunes/static/js/787.8be1628f.chunk.js",
     "static/media/spotifyLogo.png": "/pie-chart-tunes/static/media/spotifyLogo.0c4ae91bae23217d39c9.png",
     "index.html": "/pie-chart-tunes/index.html",
     "main.4c0584c3.css.map": "/pie-chart-tunes/static/css/main.4c0584c3.css.map",
-    "main.0fa0aa97.js.map": "/pie-chart-tunes/static/js/main.0fa0aa97.js.map",
+    "main.dba2c993.js.map": "/pie-chart-tunes/static/js/main.dba2c993.js.map",
     "787.8be1628f.chunk.js.map": "/pie-chart-tunes/static/js/787.8be1628f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c0584c3.css",
-    "static/js/main.0fa0aa97.js"
+    "static/js/main.dba2c993.js"
   ]
 }
