@@ -83,6 +83,7 @@ function PieChartData({userData, dataType}){
             });
 
             // Making it so only 10 genres are included then everything else is 'other'
+            setOtherList([]);
             if (tempPieData.length > 10){
                 var otherCount = 0;
                 var tempOtherList = [];
